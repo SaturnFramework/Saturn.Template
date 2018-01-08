@@ -1,0 +1,13 @@
+﻿{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Krzysztof Cieslak",
+  "classifications": [ "F#", "Web", "Framework", "ASP.Net", "Core", "Http", "Service", "Functional", "MVC" ],
+  "name": "Saturn v0.0.1",
+  "tags": {
+    "language": "F#",
+    "type": "project"
+  },
+  "identity": "Saturn.Template",
+  "shortName": "Saturn",
+  "sourceName": "SaturnServer"
+}

@@ -1,0 +1,5 @@
+.fake/
+packages/
+paket-files/
+nupkg/
+obj/

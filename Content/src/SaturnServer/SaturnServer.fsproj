@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="templates\App.fs" />
+    <Compile Include="templates\Index.fs" />
+    <Compile Include="templates\NotFound.fs" />
+    <Compile Include="templates\InternalError.fs" />
+
+    <Compile Include="Router.fs" />
+    <Compile Include="Program.fs" />
+
+    <Content Include="static\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>
