@@ -1,7 +1,10 @@
 #r @"packages/FAKE/tools/FakeLib.dll"
+#load "paket-files/fsharp/FAKE/modules/Octokit/Octokit.fsx"
 
+open System
 open Fake
 open Fake.ReleaseNotesHelper
+open Octokit
 
 let templatePath = "./Content/.template.config/template.json"
 let templateName = "Saturn"
@@ -38,17 +41,14 @@ Target "Pack" (fun () ->
   )
 )
 
-Target "Push" (fun () ->
-  Paket.Push ( fun args ->
-    { args with
-        PublishUrl = "https://www.nuget.org"
-        WorkingDir = nupkgDir
-    }
-  )
+Target "ReleaseGitHub" (fun _ ->
 
   let remoteGit = "upstream"
   let commitMsg = sprintf "Bumping version to %O" release.NugetVersion
   let tagName = string release.NugetVersion
+  let gitOwner = "Krzysztof-Cieslak"
+  let gitName = "Saturn.Template"
+
 
   Git.Branches.checkout "" false "master"
   Git.CommandHelper.directRunGitCommand "" "fetch origin" |> ignore
@@ -60,10 +60,42 @@ Target "Push" (fun () ->
 
   Git.Branches.tag "" tagName
   Git.Branches.pushTag "" remoteGit tagName
+
+  let client =
+    let user =
+        match getBuildParam "github-user" with
+        | s when not (String.IsNullOrWhiteSpace s) -> s
+        | _ -> getUserInput "Username: "
+    let pw =
+        match getBuildParam "github-pw" with
+        | s when not (String.IsNullOrWhiteSpace s) -> s
+        | _ -> getUserPassword "Password: "
+
+    createClient user pw
+
+  // release on github
+  client
+  |> createDraft gitOwner gitName release.NugetVersion (release.SemVer.PreRelease <> None) release.Notes
+  |> releaseDraft
+  |> Async.RunSynchronously
+
 )
+
+Target "Push" (fun () ->
+  Paket.Push ( fun args ->
+    { args with
+        PublishUrl = "https://www.nuget.org"
+        WorkingDir = nupkgDir
+    }
+  )
+)
+
+Target "Release" DoNothing
 
 "Clean"
   ==> "Pack"
+  ==> "ReleaseGitHub"
   ==> "Push"
+  ==> "Release"
 
 RunTargetOrDefault "Pack"
