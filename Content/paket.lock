@@ -24,6 +24,16 @@ NUGET
       System.Threading.Thread (>= 4.0) - restriction: && (< net45) (>= netstandard1.6)
       System.Threading.ThreadPool (>= 4.0.10) - restriction: && (< net45) (>= netstandard1.6)
       System.Threading.Timer (>= 4.0.1) - restriction: && (< net45) (>= netstandard1.6)
+    Giraffe (0.1.0-beta-700)
+      FSharp.Core (>= 4.2.3) - restriction: || (>= net461) (>= netstandard2.0)
+      Giraffe.Tasks (>= 0.1.0-beta-010) - restriction: || (>= net461) (>= netstandard2.0)
+      Microsoft.AspNetCore.Authentication (>= 2.0.1) - restriction: || (>= net461) (>= netstandard2.0)
+      Microsoft.AspNetCore.Diagnostics (>= 2.0.1) - restriction: || (>= net461) (>= netstandard2.0)
+      Microsoft.AspNetCore.Hosting.Abstractions (>= 2.0.1) - restriction: || (>= net461) (>= netstandard2.0)
+      Newtonsoft.Json (>= 10.0.3) - restriction: || (>= net461) (>= netstandard2.0)
+      System.Text.RegularExpressions (>= 4.3) - restriction: || (>= net461) (>= netstandard2.0)
+      System.ValueTuple (>= 4.4) - restriction: >= net461
+      System.Xml.XmlSerializer (>= 4.3) - restriction: || (>= net461) (>= netstandard2.0)
     Giraffe.Tasks (0.1.0-beta-010) - restriction: || (>= net461) (>= netstandard2.0)
       FSharp.Core (>= 4.2.3) - restriction: || (>= net461) (>= netstandard2.0)
       System.ValueTuple (>= 4.4) - restriction: >= net461
@@ -257,15 +267,15 @@ NUGET
     Microsoft.Net.Http.Headers (2.0.1) - restriction: >= netstandard2.0
       Microsoft.Extensions.Primitives (>= 2.0) - restriction: >= netstandard2.0
       System.Buffers (>= 4.4) - restriction: >= netstandard2.0
-    Microsoft.NETCore.App (2.0.4) - restriction: >= netcoreapp2.0
-      Microsoft.NETCore.DotNetHostPolicy (>= 2.0.4) - restriction: >= netcoreapp2.0
+    Microsoft.NETCore.App (2.0.5) - restriction: >= netcoreapp2.0
+      Microsoft.NETCore.DotNetHostPolicy (>= 2.0.5) - restriction: >= netcoreapp2.0
       Microsoft.NETCore.Platforms (>= 2.0.1) - restriction: >= netcoreapp2.0
       NETStandard.Library (>= 2.0.1) - restriction: >= netcoreapp2.0
-    Microsoft.NETCore.DotNetAppHost (2.0.4) - restriction: >= netcoreapp2.0
-    Microsoft.NETCore.DotNetHostPolicy (2.0.4) - restriction: >= netcoreapp2.0
-      Microsoft.NETCore.DotNetHostResolver (>= 2.0.4)
-    Microsoft.NETCore.DotNetHostResolver (2.0.4) - restriction: >= netcoreapp2.0
-      Microsoft.NETCore.DotNetAppHost (>= 2.0.4)
+    Microsoft.NETCore.DotNetAppHost (2.0.5) - restriction: >= netcoreapp2.0
+    Microsoft.NETCore.DotNetHostPolicy (2.0.5) - restriction: >= netcoreapp2.0
+      Microsoft.NETCore.DotNetHostResolver (>= 2.0.5)
+    Microsoft.NETCore.DotNetHostResolver (2.0.5) - restriction: >= netcoreapp2.0
+      Microsoft.NETCore.DotNetAppHost (>= 2.0.5)
     Microsoft.NETCore.Platforms (2.0.1) - restriction: || (&& (>= dnxcore50) (>= net461)) (&& (>= dnxcore50) (>= netstandard1.6)) (&& (>= monoandroid) (>= net461) (< netstandard1.0)) (&& (< monoandroid) (< net45) (< netstandard1.2) (>= netstandard1.6)) (&& (< monoandroid) (< net45) (< netstandard1.3) (>= netstandard1.6)) (&& (< monoandroid) (< net45) (< netstandard1.5) (>= netstandard1.6)) (&& (< monoandroid) (< netstandard1.1) (>= netstandard1.6)) (&& (>= monotouch) (>= net461)) (&& (< monotouch) (< net45) (>= netstandard1.6) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos)) (&& (< net20) (>= net461)) (&& (< net45) (>= net461)) (&& (>= net461) (< netstandard1.3) (>= wpa81)) (&& (>= net461) (>= uap10.0)) (&& (>= net461) (>= xamarinios)) (&& (>= net461) (>= xamarinmac)) (&& (>= net461) (>= xamarintvos)) (&& (>= net461) (>= xamarinwatchos)) (>= netstandard2.0)
     Microsoft.NETCore.Targets (2.0) - restriction: || (&& (>= dnxcore50) (>= net461)) (&& (>= dnxcore50) (>= netstandard1.6)) (&& (>= dnxcore50) (>= netstandard2.0)) (&& (< monoandroid) (< net45) (< netstandard1.2) (>= netstandard1.6)) (&& (< monoandroid) (< net45) (< netstandard1.3) (>= netstandard1.6)) (&& (< monoandroid) (< net45) (< netstandard1.5) (>= netstandard1.6)) (&& (< monoandroid) (< netstandard1.1) (>= netstandard1.6)) (&& (< monotouch) (< net45) (>= netstandard1.6) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos)) (&& (< net45) (>= net461)) (&& (< net45) (>= netstandard2.0))
     Microsoft.Win32.Registry (4.4) - restriction: >= netstandard2.0
@@ -311,9 +321,9 @@ NUGET
     runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl (4.3.2) - restriction: || (&& (>= dnxcore50) (>= netstandard1.6)) (&& (< monotouch) (< net45) (>= netstandard1.6) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos))
     runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl (4.3.2) - restriction: || (&& (>= dnxcore50) (>= netstandard1.6)) (&& (< monotouch) (< net45) (>= netstandard1.6) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos))
     runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl (4.3.2) - restriction: || (&& (>= dnxcore50) (>= netstandard1.6)) (&& (< monotouch) (< net45) (>= netstandard1.6) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos))
-    Saturn (0.0.8)
+    Saturn (0.0.9)
       FSharp.Core (>= 4.2.3)
-      Giraffe (>= 0.1.0-beta-801)
+      Giraffe (>= 0.1.0-beta-700)
       Microsoft.AspNetCore (>= 2.0.1)
       Microsoft.AspNetCore.ResponseCompression (>= 2.0.1)
       Microsoft.AspNetCore.Session (>= 2.0.1)
@@ -750,7 +760,7 @@ NUGET
       Microsoft.NETCore.Targets (>= 1.1) - restriction: || (>= dnxcore50) (&& (< monotouch) (< net451) (>= netstandard1.2) (< win81) (< wpa81) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos))
       System.Runtime (>= 4.3) - restriction: || (>= dnxcore50) (&& (< monotouch) (< net451) (>= netstandard1.2) (< win81) (< wpa81) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos))
     System.ValueTuple (4.4) - restriction: >= net461
-    System.Xml.ReaderWriter (4.3) - restriction: || (&& (>= dnxcore50) (>= net461)) (&& (>= dnxcore50) (>= netstandard2.0)) (&& (< net20) (>= net461)) (&& (< net20) (>= netstandard2.0)) (&& (< net45) (>= net461)) (&& (< net45) (>= netstandard2.0))
+    System.Xml.ReaderWriter (4.3.1) - restriction: || (&& (>= dnxcore50) (>= net461)) (&& (>= dnxcore50) (>= netstandard2.0)) (&& (< net20) (>= net461)) (&& (< net20) (>= netstandard2.0)) (&& (< net45) (>= net461)) (&& (< net45) (>= netstandard2.0))
       System.Collections (>= 4.3) - restriction: || (>= dnxcore50) (&& (< monotouch) (< net45) (>= netstandard1.3) (< win8) (< wpa81) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos))
       System.Diagnostics.Debug (>= 4.3) - restriction: || (>= dnxcore50) (&& (< monotouch) (< net45) (>= netstandard1.3) (< win8) (< wpa81) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos))
       System.Globalization (>= 4.3) - restriction: || (>= dnxcore50) (&& (< monotouch) (< net45) (>= netstandard1.3) (< win8) (< wpa81) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos))
@@ -795,27 +805,7 @@ NUGET
       System.Threading (>= 4.3) - restriction: || (>= dnxcore50) (&& (< monotouch) (< net45) (>= netstandard1.3) (< win8) (< wpa81) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos))
       System.Xml.ReaderWriter (>= 4.3) - restriction: || (>= dnxcore50) (&& (< monoandroid) (< net45) (>= netstandard1.0) (< netstandard1.3) (< win8) (< wp8) (< wpa81)) (&& (< monotouch) (< net45) (>= netstandard1.3) (< win8) (< wpa81) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos))
       System.Xml.XmlDocument (>= 4.3) - restriction: || (>= dnxcore50) (&& (< monotouch) (< net45) (>= netstandard1.3) (< win8) (< wpa81) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos))
-  remote: paket-files/github.com/Krzysztof-Cieslak/Giraffe/src/Giraffe/bin/Release
-    Giraffe (0.1.0-beta-801)
-      FSharp.Core (>= 4.2.3) - restriction: || (>= net461) (>= netstandard2.0)
-      Giraffe.Tasks (>= 0.1.0-beta-010) - restriction: || (>= net461) (>= netstandard2.0)
-      Microsoft.AspNetCore.Authentication (>= 2.0.1) - restriction: || (>= net461) (>= netstandard2.0)
-      Microsoft.AspNetCore.Diagnostics (>= 2.0.1) - restriction: || (>= net461) (>= netstandard2.0)
-      Microsoft.AspNetCore.Hosting.Abstractions (>= 2.0.1) - restriction: || (>= net461) (>= netstandard2.0)
-      Newtonsoft.Json (>= 10.0.3) - restriction: || (>= net461) (>= netstandard2.0)
-      System.Text.RegularExpressions (>= 4.3) - restriction: || (>= net461) (>= netstandard2.0)
-      System.ValueTuple (>= 4.4) - restriction: >= net461
-      System.Xml.XmlSerializer (>= 4.3) - restriction: || (>= net461) (>= netstandard2.0)
-GIT
-  remote: https://github.com/Krzysztof-Cieslak/Giraffe
-     (569432a79eb671fbc42fc33fdf0169161ff69835)
-      build: powershell ./build.ps1 -Release -ExcludeTests -ExcludeSamples -Pack
-      path: /src/Giraffe/bin/Release
-      os: windows
-     (569432a79eb671fbc42fc33fdf0169161ff69835)
-      build: ./build.sh -Release -ExcludeTests -ExcludeSamples -Pack
-      path: /src/Giraffe/bin/Release
-      os: mono
+
 GROUP Build
 NUGET
   remote: https://api.nuget.org/v3/index.json
