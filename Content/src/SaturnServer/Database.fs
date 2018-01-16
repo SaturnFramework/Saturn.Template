@@ -22,7 +22,7 @@ let query (connection:#DbConnection) (sql:string) (parameters:IDictionary<string
             let! res =
                 match parameters with
                 | Some p -> connection.QueryAsync<'T>(sql, p)
-                | None    -> connection.QueryAsync<'T>(sql)
+                | None -> connection.QueryAsync<'T>(sql)
             return Ok res
         with
         | ex -> return Error ex
@@ -33,9 +33,12 @@ let querySingle (connection:#DbConnection) (sql:string) (parameters:IDictionary<
         try
             let! res =
                 match parameters with
-                | Some p -> connection.QuerySingleAsync<'T>(sql, p)
-                | None    -> connection.QuerySingleAsync<'T>(sql)
-            return Ok res
+                | Some p -> connection.QuerySingleOrDefaultAsync<'T>(sql, p)
+                | None -> connection.QuerySingleOrDefaultAsync<'T>(sql)
+            return
+                if isNull (box res) then Ok None
+                else Ok (Some res)
+
         with
         | ex -> return Error ex
     }
