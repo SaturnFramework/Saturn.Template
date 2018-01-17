@@ -10,14 +10,14 @@ let layout (content: XmlNode list) =
             title [] [encodedText "Hello SaturnServer"]
             link [_rel "stylesheet"; _href "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" ]
             link [_rel "stylesheet"; _href "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css" ]
-            link [_rel "stylesheet"; _href "app.css" ]
+            link [_rel "stylesheet"; _href "/app.css" ]
 
         ]
         body [] [
             yield nav [ _class "navbar is-fixed-top has-shadow" ] [
                 div [_class "navbar-brand"] [
                     a [_class "navbar-item"; _href "/"] [
-                        img [_src "logo.png"; _width "112"; _height "28"]
+                        img [_src "/logo.png"; _width "112"; _height "28"]
                     ]
                     div [_class "navbar-burger burger"; attr "data-target" "navMenu"] [
                         span [] []
@@ -44,6 +44,6 @@ let layout (content: XmlNode list) =
                     ]
                 ]
             ]
-            yield script [_src "app.js"] []
+            yield script [_src "/app.js"] []
         ]
     ]
