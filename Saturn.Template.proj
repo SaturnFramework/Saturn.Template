@@ -5,7 +5,7 @@
     <PackageProjectUrl>https://github.com/Krzysztof-Cieslak/Saturn-template</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/Krzysztof-Cieslak/Saturn-template/blob/master/LICENSE.md</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/Krzysztof-Cieslak/Saturn-template.git</RepositoryUrl>
-    <PackageTags>template;fsharp;web;framewrok;ASP.Net;Core;Http;Service;MVC;functional</PackageTags>
+    <PackageTags>template;web;f#;MVC;</PackageTags>
     <NeutralLanguage>en-US</NeutralLanguage>
     <PackageType>Template</PackageType>
     <NoBuild>true</NoBuild>

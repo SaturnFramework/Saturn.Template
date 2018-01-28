@@ -3,6 +3,7 @@ module Server
 open Saturn.Pipeline
 open Saturn.Application
 open Giraffe
+open Config
 
 let endpointPipe = pipeline {
     plug head
@@ -18,6 +19,7 @@ let app = application {
     memory_cache
     use_static "static"
     use_gzip
+    use_config (fun _ -> {connectionString = ""} ) //TODO: Set development time configuration
 }
 
 [<EntryPoint>]

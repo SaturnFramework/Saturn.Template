@@ -6,6 +6,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Database.fs" />
+    <Compile Include="Config.fs" />
 
     <Compile Include="Templates\App.fs" />
     <Compile Include="Templates\Index.fs" />
