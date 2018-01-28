@@ -11,11 +11,6 @@ let browser = pipeline {
     set_header "x-pipeline-type" "Browser"
 }
 
-let api = pipeline {
-    plug acceptJson
-    set_header "x-pipeline-type" "Api"
-}
-
 let defaultView = scope {
     get "/" (renderHtml Index.layout)
     get "/index.html" (redirectTo false "/")
@@ -31,15 +26,19 @@ let browserRouter = scope {
 
 //Other scopes may use different pipelines and error handlers
 
+// let api = pipeline {
+//     plug acceptJson
+//     set_header "x-pipeline-type" "Api"
+// }
+
 // let apiRouter = scope {
 //     error_handler (text "Api 404")
 //     pipe_through api
-//     get "/" (text "hello world")
-//     getf "/%s/%i" (fun (str, age) -> text (sprintf "hello world, %s, You're %i" str age))
+//
+//     forward "/someApi" someScopeOrController
 // }
 
 let router = scope {
-    error_handler (text "Top Router 404")
     // forward "/api" apiRouter
     forward "" browserRouter
 }

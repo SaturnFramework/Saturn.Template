@@ -19,19 +19,19 @@ let index =
         section [_class "section"] [
             h1 [_class "title"] [rawText "Resources"]
             div [_class "tile is-ancestor"] [
-                div [_class "tile is-parent is-3"] [
+                div [_class "tile is-parent is-4"] [
                     article [_class "tile is-child notification is-primary box"] [
-                        a [_class "title "] [rawText "Guides"]
+                        a [_class "title "] [rawText "Guides (WIP)"]
                     ]
                 ]
-                div [_class "tile is-parent is-3"] [
+                div [_class "tile is-parent is-4"] [
                     article [_class "tile is-child notification is-info box"] [
-                        a [_class "title"] [rawText "Documentation"]
+                        a [_class "title"] [rawText "Documentation (WIP)"]
                     ]
                 ]
-                div [_class "tile is-parent is-3"] [
+                div [_class "tile is-parent is-4"] [
                     article [_class "tile is-child notification is-warning box"] [
-                        a [_class "title"] [rawText "Source"]
+                        a [_class "title"; _href "https://github.com/SaturnFramework/Saturn" ] [rawText "Source"]
                     ]
                 ]
 
@@ -40,19 +40,19 @@ let index =
         section [_class "section"] [
             h1 [_class "title"] [rawText "Help"]
             div [_class "tile is-ancestor"] [
-                div [_class "tile is-parent is-3"] [
+                div [_class "tile is-parent is-4"] [
                     article [_class "tile is-child notification is-link box"] [
-                        a [_class "title "] [rawText "GitHub issues"]
+                        a [_class "title"; _href "https://github.com/SaturnFramework/Saturn/issues"] [rawText "GitHub issues"]
                     ]
                 ]
-                div [_class "tile is-parent is-3"] [
+                div [_class "tile is-parent is-4"] [
                     article [_class "tile is-child notification is-danger box"] [
-                        a [_class "title"] [rawText "Gitter"]
+                        a [_class "title"; _href "https://gitter.im/SaturnFramework/Saturn"] [rawText "Gitter"]
                     ]
                 ]
-                div [_class "tile is-parent is-3"] [
+                div [_class "tile is-parent is-4"] [
                     article [_class "tile is-child notification is-success box"] [
-                        a [_class "title"] [rawText "Commercial support"]
+                        a [_class "title"; _href "https://safe-stack.github.io/"] [rawText "SAFE Stack"]
                     ]
                 ]
 

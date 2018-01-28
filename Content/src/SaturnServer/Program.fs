@@ -19,11 +19,11 @@ let app = application {
     memory_cache
     use_static "static"
     use_gzip
-    use_config (fun _ -> {connectionString = ""} ) //TODO: Set development time configuration
+    use_config (fun _ -> {connectionString = "DataSource=database.sqlite"} ) //TODO: Set development time configuration
 }
 
 [<EntryPoint>]
 let main _ =
-    printfn "%s" (System.IO.Directory.GetCurrentDirectory())
+    printfn "Working directory - %s" (System.IO.Directory.GetCurrentDirectory())
     run app
     0 // return an integer exit code

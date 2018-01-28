@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Krzysztof Cieslak",
   "classifications": [ "F#", "Web", "Framework", "ASP.Net", "Core", "Http", "Service", "Functional", "MVC" ],
-  "name": "Saturn v0.0.1.4",
+  "name": "Saturn v0.0.1.7",
   "tags": {
     "language": "F#",
     "type": "project"
