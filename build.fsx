@@ -82,13 +82,11 @@ Target "ReleaseGitHub" (fun _ ->
 )
 
 Target "Push" (fun () ->
-  Paket.Push ( fun args ->
-    { args with
-        PublishUrl = "https://www.nuget.org"
-        WorkingDir = nupkgDir
-    }
-  )
-)
+    let key =
+        match getBuildParam "nuget-key" with
+        | s when not (String.IsNullOrWhiteSpace s) -> s
+        | _ -> getUserPassword "NuGet Key: "
+    Paket.Push (fun p -> { p with WorkingDir = nupkgDir; ApiKey = key }))
 
 Target "Release" DoNothing
 
