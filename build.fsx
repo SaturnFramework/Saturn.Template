@@ -43,7 +43,7 @@ Target "Pack" (fun () ->
 
 Target "ReleaseGitHub" (fun _ ->
 
-  let remoteGit = "upstream"
+  let remoteGit = "origin"
   let commitMsg = sprintf "Bumping version to %O" release.NugetVersion
   let tagName = string release.NugetVersion
   let gitOwner = "Krzysztof-Cieslak"
