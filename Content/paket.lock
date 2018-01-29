@@ -11,7 +11,7 @@ NUGET
       System.Reflection.TypeExtensions (>= 4.4) - restriction: || (&& (< net451) (>= netstandard1.3) (< netstandard2.0)) (&& (< net451) (>= netstandard2.0))
       System.Runtime.InteropServices (>= 4.3) - restriction: && (< net451) (>= netstandard1.3) (< netstandard2.0)
       System.Xml.XmlDocument (>= 4.3) - restriction: && (< net451) (>= netstandard1.3) (< netstandard2.0)
-    dotnet-saturn (0.1.5) - clitool: true
+    dotnet-saturn (0.2) - clitool: true
       FSharp.Core (>= 4.2.3) - restriction: >= netcoreapp2.0
       Microsoft.NETCore.App (>= 2.0) - restriction: >= netcoreapp2.0
     FSharp.Core (4.3.2)
@@ -400,7 +400,7 @@ NUGET
     runtime.win-arm64.runtime.native.System.Data.SqlClient.sni (4.4) - restriction: || (&& (< monoandroid) (< monotouch) (< net451) (>= netstandard1.3) (< netstandard2.0) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos)) (&& (< net451) (>= netstandard2.0)) (>= netcoreapp2.0)
     runtime.win-x64.runtime.native.System.Data.SqlClient.sni (4.4) - restriction: || (&& (< monoandroid) (< monotouch) (< net451) (>= netstandard1.3) (< netstandard2.0) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos)) (&& (< net451) (>= netstandard2.0)) (>= netcoreapp2.0)
     runtime.win-x86.runtime.native.System.Data.SqlClient.sni (4.4) - restriction: || (&& (< monoandroid) (< monotouch) (< net451) (>= netstandard1.3) (< netstandard2.0) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos)) (&& (< net451) (>= netstandard2.0)) (>= netcoreapp2.0)
-    Saturn (0.0.13)
+    Saturn (0.2)
       FSharp.Core (>= 4.2.3)
       Giraffe (>= 0.1.0-beta-700)
       Microsoft.AspNetCore (>= 2.0.1)
