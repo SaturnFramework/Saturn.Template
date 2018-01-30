@@ -27,7 +27,7 @@ let layout (content: XmlNode list) =
                 ]
                 div [_class "navbar-menu"; _id "navMenu"] [
                     div [_class "navbar-start"] [
-                        a [_class "navbar-item"; _href "https://github.com/Krzysztof-Cieslak/Saturn/blob/master/README.md"] [rawText "Getting started"]
+                        a [_class "navbar-item"; _href "https://github.com/SaturnFramework/Saturn/blob/master/README.md"] [rawText "Getting started"]
                     ]
                 ]
             ]
@@ -37,7 +37,7 @@ let layout (content: XmlNode list) =
                     div [_class "content has-text-centered"] [
                         p [] [
                             rawText "Powered by "
-                            a [_href "https://github.com/Krzysztof-Cieslak/Saturn"] [rawText "Saturn"]
+                            a [_href "https://github.com/SaturnFramework/Saturn"] [rawText "Saturn"]
                             rawText " - F# MVC framework created by "
                             a [_href "http://lambdafactory.io"] [rawText "λFactory"]
                         ]
