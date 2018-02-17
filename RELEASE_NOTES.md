@@ -1,3 +1,6 @@
+#### 0.4.0 - 17.02.2018
+* Update to latest Giraffe
+
 #### 0.2.1 - 28.01.2018
 
 * Initial release

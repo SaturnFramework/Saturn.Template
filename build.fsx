@@ -73,9 +73,12 @@ Target "ReleaseGitHub" (fun _ ->
 
     createClient user pw
 
+  let file = !! (nupkgDir </> "*.nupkg") |> Seq.head
+
   // release on github
   client
   |> createDraft gitOwner gitName release.NugetVersion (release.SemVer.PreRelease <> None) release.Notes
+  |> uploadFile file
   |> releaseDraft
   |> Async.RunSynchronously
 
