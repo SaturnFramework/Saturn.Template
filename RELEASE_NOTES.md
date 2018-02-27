@@ -1,3 +1,6 @@
+#### 0.4.1 - 28.02.2018
+* Update to latest Saturn Giraffe Satur tooling Paket
+
 #### 0.4.0 - 17.02.2018
 * Update to latest Giraffe
 
