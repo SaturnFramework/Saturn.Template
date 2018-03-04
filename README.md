@@ -10,7 +10,8 @@ A dotnet CLI template for [Saturn](https://github.com/Krzysztof-Cieslak/Saturn) 
 ## Using the template
 
 * Install or update the template: `dotnet new -i Saturn.Template`
-* Create a new project from the template: `dotnet new Saturn`
+* Create a new project from the template: `dotnet new Saturn --name my-saturn-project`
+  * Note: due to [NuGet behavior](https://github.com/SaturnFramework/Saturn.Template/issues/7) you have to provide a different name than working directory (e.g. `my-saturn-project`)
 
 ## How to contribute
 
