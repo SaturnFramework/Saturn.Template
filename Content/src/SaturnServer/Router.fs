@@ -39,7 +39,7 @@ let browserRouter = router {
 //     forward "/someApi" someScopeOrController
 // }
 
-let router = scope {
+let appRouter = router {
     // forward "/api" apiRouter
     forward "" browserRouter
 }
