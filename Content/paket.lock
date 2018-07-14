@@ -17,7 +17,7 @@ NUGET
       System.Reflection.TypeExtensions (>= 4.4) - restriction: || (&& (< net451) (>= netstandard1.3) (< netstandard2.0)) (&& (< net451) (>= netstandard2.0))
       System.Runtime.InteropServices (>= 4.3) - restriction: && (< net451) (>= netstandard1.3) (< netstandard2.0)
       System.Xml.XmlDocument (>= 4.3) - restriction: && (< net451) (>= netstandard1.3) (< netstandard2.0)
-    dotnet-saturn (0.7) - clitool: true
+    dotnet-saturn (0.7.1) - clitool: true
       Argu (>= 4.2.1) - restriction: >= netcoreapp2.0
       ConsoleTables (>= 2.2) - restriction: >= netcoreapp2.0
       FSharp.Core (>= 4.2.3) - restriction: >= netcoreapp2.0
