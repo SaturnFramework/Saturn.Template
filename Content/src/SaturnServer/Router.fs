@@ -12,13 +12,13 @@ let browser = pipeline {
     set_header "x-pipeline-type" "Browser"
 }
 
-let defaultView = scope {
+let defaultView = router {
     get "/" (htmlView Index.layout)
     get "/index.html" (redirectTo false "/")
     get "/default.html" (redirectTo false "/")
 }
 
-let browserRouter = scope {
+let browserRouter = router {
     not_found_handler (htmlView NotFound.layout) //Use the default 404 webpage
     pipe_through browser //Use the default browser pipeline
 
@@ -32,7 +32,7 @@ let browserRouter = scope {
 //     set_header "x-pipeline-type" "Api"
 // }
 
-// let apiRouter = scope {
+// let apiRouter = router {
 //     error_handler (text "Api 404")
 //     pipe_through api
 //

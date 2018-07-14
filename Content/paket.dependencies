@@ -6,7 +6,6 @@ nuget Simple.Migrations
 nuget Microsoft.Data.Sqlite
 nuget Dapper
 
-clitool Microsoft.DotNet.Watcher.Tools
 clitool dotnet-saturn
 
 group Build
