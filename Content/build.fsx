@@ -1,35 +1,40 @@
-#r @"packages/build/FAKE/tools/FakeLib.dll"
+#load ".fake/build.fsx/intellisense.fsx"
 
-open System
+open Fake.Core
+open Fake.Core.TargetOperators
+open Fake.DotNet
+open Fake.IO
+open System.Threading
 
-open Fake
+let appPath = "./src/SaturnServer/" |> Path.getFullName
+let projectPath = Path.combine appPath "SaturnServer.fsproj"
+let dotnetcliVersion = DotNet.getSDKVersionFromGlobalJson()
 
-let appPath = "./src/SaturnServer/" |> FullName
 
-let dotnetcliVersion = DotNetCli.GetDotNetSDKVersionFromGlobalJson()
+Target.create "Clean" ignore
 
-Target "Clean" DoNothing
+Target.create "InstallDotNetCore" (fun _ ->
+  DotNet.install
+    (fun o -> { o with Version = DotNet.CliVersion.Version dotnetcliVersion })
+  |> ignore
+)
 
-Target "InstallDotNetCore" (fun _ ->
-  DotNetCli.InstallDotNetSDK dotnetcliVersion |> ignore
+Target.create "Restore" (fun _ ->
+    DotNet.restore id projectPath
+)
+
+Target.create "Build" (fun _ ->
+    DotNet.build id projectPath
 )
 
 
-Target "Restore" (fun _ ->
-    DotNetCli.Restore (fun p -> {p with WorkingDir = appPath})
-)
-
-Target "Build" (fun _ ->
-    DotNetCli.Build(fun p -> {p with WorkingDir = appPath})
-)
-
-Target "Run" (fun () ->
+Target.create "Run" (fun _ ->
   let server = async {
-    DotNetCli.RunCommand (fun p -> {p with WorkingDir = appPath}) "watch run"
+    DotNet.exec (fun p -> { p with WorkingDirectory = appPath } ) "watch" "run" |> ignore
   }
   let browser = async {
-    Threading.Thread.Sleep 5000
-    Diagnostics.Process.Start "http://localhost:8085" |> ignore
+    Thread.Sleep 5000
+    Process.start (fun i -> { i with FileName = "http://localhost:8085" }) |> ignore
   }
 
   [ server; browser]
@@ -46,4 +51,4 @@ Target "Run" (fun () ->
   ==> "Restore"
   ==> "Run"
 
-RunTargetOrDefault "Build"
+Target.runOrDefault "Build"
