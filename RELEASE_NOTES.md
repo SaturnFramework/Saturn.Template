@@ -1,3 +1,6 @@
+#### 0.8.0 -27.01.2019
+* Update to Saturn 0.8
+
 #### 0.7.0 - 14.07.2018
 * Update to Saturn 0.7
 
