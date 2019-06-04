@@ -3,7 +3,7 @@
     <Description>Saturn Template</Description>
     <Authors>Krzysztof Cieslak</Authors>
     <PackageProjectUrl>https://github.com/SaturnFramework/Saturn.Template</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/SaturnFramework/Saturn.Template/blob/master/LICENSE.md</PackageLicenseUrl>
+    <License>MIT</License>
     <RepositoryUrl>https://github.com/SaturnFramework/Saturn.Template.git</RepositoryUrl>
     <PackageIconUrl>https://avatars0.githubusercontent.com/u/35305523?s=200</PackageIconUrl>
     <PackageTags>template;web;f#;MVC;</PackageTags>
@@ -11,7 +11,7 @@
     <PackageType>Template</PackageType>
     <NoBuild>true</NoBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
   <PropertyGroup>
     <ExcludeFromPackage>
