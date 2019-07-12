@@ -2,7 +2,7 @@ source https://api.nuget.org/v3/index.json
 
 storage: none
 
-framework: netcoreapp2.0
+framework: netcoreapp2.1
 
 nuget FSharp.Core
 nuget Saturn
