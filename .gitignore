@@ -4,3 +4,4 @@ paket-files/
 nupkg/
 obj/
 release.cmd
+.ionide/
