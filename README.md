@@ -5,18 +5,17 @@ A dotnet CLI template for [Saturn](https://github.com/Krzysztof-Cieslak/Saturn) 
 
 ## Prerequisites
 
-* [dotnet SDK 2.0.0](https://www.microsoft.com/net/core) together with dotnet CLI
+* [dotnet SDK 2.1 LTS](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+* FAKE 5 CLI - `dotnet tool install fake-cli -g`
 
 ## Using the template
 
 * Install or update the template: `dotnet new -i Saturn.Template`
-* Create a new project from the template: `dotnet new Saturn --name my-saturn-project --language F#`
+* Create a new project from the template: `dotnet new Saturn --name my-saturn-project`
   * Note: due to [NuGet behavior](https://github.com/SaturnFramework/Saturn.Template/issues/7) you have to provide a different name than working directory (e.g. `my-saturn-project`)
-  * Note: `-lang F#` or `--language F#` is also currently required, due to [CLI issue](https://github.com/SAFE-Stack/SAFE-template/issues/28)
 * Run `.paket/paket.exe update`
-* For build execute `fake.sh build` or `.\fake.cmd build`
-* For running execute `fake.sh build -t Run` or `.\fake.cmd build -t Run`
-
+* For build execute `fake build`
+* For running execute `fake build -t Run`
 
 ## How to contribute
 
