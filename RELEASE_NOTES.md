@@ -1,3 +1,7 @@
+#### 0.10.0 - 22.10.2019
+* Update to .Net Core 3 and Saturn 0.10.0
+* Project File is now a Web Project. Support Pulishing via Visual Studio
+
 #### 0.9.0 - 30.07.2019
 * Update to Saturn 0.9
 
