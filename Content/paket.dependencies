@@ -10,7 +10,12 @@ nuget Simple.Migrations
 nuget Microsoft.Data.Sqlite
 nuget Dapper
 
-clitool dotnet-saturn
+group Cli
+  source https://api.nuget.org/v3/index.json
+  storage: none
+
+  clitool dotnet-saturn
+
 
 // [ FAKE GROUP ]
 group Build
