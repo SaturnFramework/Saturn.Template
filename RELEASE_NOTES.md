@@ -1,3 +1,7 @@
+#### 0.12.1.1 - 19.04.2020
+* Modernize template infrastructure - use .Net SDK local tools
+* Use `Saturn.Cli` tool
+
 #### 0.12.1 - 02.03.2020
 * Update to Saturn 0.12.1
 
