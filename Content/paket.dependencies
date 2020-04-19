@@ -1,5 +1,4 @@
 source https://api.nuget.org/v3/index.json
-
 storage: none
 
 framework: netcoreapp3.1
@@ -10,17 +9,10 @@ nuget Simple.Migrations
 nuget Microsoft.Data.Sqlite
 nuget Dapper
 
-group Cli
-  source https://api.nuget.org/v3/index.json
-  storage: none
-
-  clitool dotnet-saturn
-
 
 // [ FAKE GROUP ]
 group Build
   source https://api.nuget.org/v3/index.json
-
   storage: none
 
   framework: netstandard2.0

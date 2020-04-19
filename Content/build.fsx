@@ -8,16 +8,9 @@ open System.Threading
 
 let appPath = "./src/SaturnServer/" |> Path.getFullName
 let projectPath = Path.combine appPath "SaturnServer.fsproj"
-let dotnetcliVersion = DotNet.getSDKVersionFromGlobalJson()
 
 
 Target.create "Clean" ignore
-
-Target.create "InstallDotNetCore" (fun _ ->
-  DotNet.install
-    (fun o -> { o with Version = DotNet.CliVersion.Version dotnetcliVersion })
-  |> ignore
-)
 
 Target.create "Restore" (fun _ ->
     DotNet.restore id projectPath
@@ -44,7 +37,7 @@ Target.create "Run" (fun _ ->
 )
 
 "Clean"
-  ==> "InstallDotNetCore"
+  ==> "Restore"
   ==> "Build"
 
 "Clean"

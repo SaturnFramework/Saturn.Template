@@ -3,6 +3,3 @@ Saturn
 
 Dapper
 Microsoft.Data.Sqlite
-
-group Cli
-    dotnet-saturn
