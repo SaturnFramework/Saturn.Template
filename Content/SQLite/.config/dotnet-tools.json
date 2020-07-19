@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "paket": {
+      "version": "5.243.0",
+      "commands": [
+        "paket"
+      ]
+    },
+    "fake-cli": {
+      "version": "5.19.1",
+      "commands": [
+        "fake"
+      ]
+    },
+    "saturn.cli": {
+      "version": "0.12.1",
+      "commands": [
+        "saturn"
+      ]
+    }
+  }
+}
