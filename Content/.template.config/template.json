@@ -9,5 +9,32 @@
   },
   "identity": "Saturn.Template",
   "shortName": "Saturn",
-  "sourceName": "SaturnServer"
+  "sourceName": "SaturnServer",
+  "symbols": {
+    "database": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "sqlite",
+      "choices": [
+        {
+          "choice": "sqlite",
+          "description": "Create project using SQLite"
+        },
+        {
+          "choice": "postgresql",
+          "description": "Create project using PostgreSQL"
+        }
+      ]
+    }
+  },
+  "sources": [{
+    "source": "./SQLite/",
+    "target": "./",
+    "condition": "(database == \"sqlite\")"
+  },
+  {
+    "source": "./PostgreSQL/",
+    "target": "./",
+    "condition": "(database == \"postgresql\")"
+  }]
 }
