@@ -27,7 +27,9 @@ Target.create "Run" (fun _ ->
   }
   let browser = async {
     Thread.Sleep 5000
-    Process.start (fun i -> { i with FileName = "http://localhost:8085" }) |> ignore
+    RawCommand("file", Arguments.ofList ["http://localhost:8085"])
+    |> CreateProcess.fromCommand
+    |> ignore
   }
 
   [ server; browser]
