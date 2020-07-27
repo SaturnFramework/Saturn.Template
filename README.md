@@ -10,7 +10,7 @@ A dotnet CLI template for [Saturn](https://github.com/Krzysztof-Cieslak/Saturn) 
 ## Using the template
 
 * Install or update the template: `dotnet new -i Saturn.Template`
-* Create a new project from the template: `dotnet new Saturn --name my-saturn-project`
+* Create a new project from the template: `dotnet new Saturn --name my-saturn-project --database sqlite`
 * Follow instructions in the readme of generated project
 
 
