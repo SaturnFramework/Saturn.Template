@@ -21,12 +21,12 @@ let index =
             div [_class "tile is-ancestor"] [
                 div [_class "tile is-parent is-4"] [
                     article [_class "tile is-child notification is-primary box"] [
-                        a [_class "title "] [rawText "Guides (WIP)"]
+                        a [_class "title"; _href "https://saturnframework.org/tutorials/how-to-start.html" ] [rawText "Guides (WIP)"]
                     ]
                 ]
                 div [_class "tile is-parent is-4"] [
                     article [_class "tile is-child notification is-info box"] [
-                        a [_class "title"] [rawText "Documentation (WIP)"]
+                        a [_class "title"; _href "https://saturnframework.org/explanations/overview.html" ] [rawText "Documentation (WIP)"]
                     ]
                 ]
                 div [_class "tile is-parent is-4"] [
