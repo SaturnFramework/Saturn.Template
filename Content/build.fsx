@@ -6,6 +6,8 @@ open Fake.DotNet
 open Fake.IO
 open System.Threading
 
+open System.Runtime.InteropServices
+
 let appPath = "./src/SaturnServer/" |> Path.getFullName
 let projectPath = Path.combine appPath "SaturnServer.fsproj"
 
@@ -27,7 +29,13 @@ Target.create "Run" (fun _ ->
   }
   let browser = async {
     Thread.Sleep 5000
-    Process.start (fun i -> { i with FileName = "http://localhost:8085" }) |> ignore
+
+    if RuntimeInformation.IsOSPlatform(OSPlatform.Windows) then
+      CreateProcess.fromRawCommand "cmd.exe" [ "/C"; "start http://localhost:8085" ] |> Proc.run |> ignore
+    elif RuntimeInformation.IsOSPlatform(OSPlatform.Linux) then
+      CreateProcess.fromRawCommand "xdg-open" [ "http://localhost:8085" ] |> Proc.run |> ignore
+    elif RuntimeInformation.IsOSPlatform(OSPlatform.OSX) then
+      CreateProcess.fromRawCommand "open" [ "http://localhost:8085" ] |> Proc.run |> ignore
   }
 
   [ server; browser]
