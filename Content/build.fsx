@@ -8,8 +8,8 @@ open System.Threading
 
 open System.Runtime.InteropServices
 
-let appPath = "./src/SaturnServer/" |> Path.getFullName
-let projectPath = Path.combine appPath "SaturnServer.fsproj"
+let appPath = "./src/SaturnServer.1/" |> Path.getFullName
+let projectPath = Path.combine appPath "SaturnServer.1.fsproj"
 
 
 Target.create "Clean" ignore

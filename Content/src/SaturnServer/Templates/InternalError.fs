@@ -7,7 +7,7 @@ let layout (ex: Exception) =
         head [] [
             meta [_charset "utf-8"]
             meta [_name "viewport"; _content "width=device-width, initial-scale=1" ]
-            title [] [encodedText "SaturnServer - Error #500"]
+            title [] [encodedText "SaturnServer.1 - Error #500"]
         ]
         body [] [
            h1 [] [rawText "ERROR #500"]
