@@ -3,7 +3,7 @@ module Database
 open Dapper
 open System.Data.Common
 open System.Collections.Generic
-open FSharp.Control.Tasks.ContextInsensitive
+open FSharp.Control.Tasks
 
 let inline (=>) k v = k, box v
 

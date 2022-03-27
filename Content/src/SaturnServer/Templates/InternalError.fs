@@ -1,7 +1,8 @@
 module InternalError
 
 open System
-open Giraffe.GiraffeViewEngine
+open Giraffe.ViewEngine
+
 let layout (ex: Exception) =
     html [_class "has-navbar-fixed-top"] [  
         head [] [
