@@ -1,0 +1,7 @@
+image: gitpod/workspace-dotnet
+
+# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - init: dotnet fake build -t Build
+    command: Build
+
