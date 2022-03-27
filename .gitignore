@@ -5,3 +5,4 @@ nupkg/
 obj/
 release.cmd
 .ionide/
+bin/

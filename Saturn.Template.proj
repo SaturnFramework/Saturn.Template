@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>`dotnet new` template for Saturn Framework</Description>
@@ -23,10 +24,11 @@
         **/.fake/**/*;
         **/.ionide/**/*;
     </ExcludeFromPackage>
-</PropertyGroup>
+  </PropertyGroup>
   <ItemGroup>
-    <Content Include="Content/**/*" Exclude="$(ExcludeFromPackage)" >
-        <PackagePath>Content\</PackagePath>
+    <Content Include="Content/**/*" Exclude="$(ExcludeFromPackage)">
+      <PackagePath>Content\</PackagePath>
     </Content>
   </ItemGroup>
+  <Import Project=".paket\Paket.Restore.targets" />
 </Project>
