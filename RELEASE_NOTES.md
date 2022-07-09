@@ -1,3 +1,7 @@
+#### 1.0.0 - 09.07.2022
+
+* .NET 6 support
+
 #### 0.12.1.1 - 19.04.2020
 * Modernize template infrastructure - use .Net SDK local tools
 * Use `Saturn.Cli` tool

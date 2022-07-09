@@ -1,0 +1,43 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - 'v*' # Publish on any new tag starting with v
+
+jobs:
+  build:
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        dotnet: [6.0.200]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{ matrix.dotnet }}
+
+    - name: Restore tools
+      run: dotnet tool restore
+
+    - name: Publish to NuGet
+      run: dotnet run --project build/Build.fsproj -- Push
+      env:
+        nuget-key: ${{ secrets.NUGET_KEY }}
+
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.3.1
+      with:
+        path: build
+    - name: Create Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: build/out/*.nupkg
+        token: ${{ secrets.GITHUB_TOKEN }}
+        generateReleaseNotes: true

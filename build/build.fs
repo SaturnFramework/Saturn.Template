@@ -112,7 +112,6 @@ let init args =
     [
       "Clean"
         ==> "Pack"
-        ==> "ReleaseGitHub"
         ==> "Push"
         ==> "Release"
     ]
