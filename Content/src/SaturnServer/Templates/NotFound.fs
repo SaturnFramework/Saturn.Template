@@ -1,6 +1,6 @@
 module NotFound
 
-open Giraffe.GiraffeViewEngine
+open Giraffe.ViewEngine
 
 let layout =
     html [_class "has-navbar-fixed-top"] [

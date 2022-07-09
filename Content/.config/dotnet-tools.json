@@ -3,19 +3,13 @@
   "isRoot": true,
   "tools": {
     "paket": {
-      "version": "5.243.0",
+      "version": "7.0.2",
       "commands": [
         "paket"
       ]
     },
-    "fake-cli": {
-      "version": "5.19.1",
-      "commands": [
-        "fake"
-      ]
-    },
     "saturn.cli": {
-      "version": "0.12.1",
+      "version": "1.0.4",
       "commands": [
         "saturn"
       ]

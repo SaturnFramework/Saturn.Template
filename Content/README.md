@@ -1,6 +1,6 @@
 ### How to build application
 
-1. Make sure you have installed version of .Net SDK defined in `global.json`
+1. Make sure you have installed version of .NET SDK defined in `global.json`
 2. Run `dotnet tool restore` to restore all necessary tools
 3. Run `dotnet saturn migration` to create sqlite database
 3. Run `dotnet fake build -t Run` to start application in watch mode (automatic recompilation and restart at file save)
