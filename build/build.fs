@@ -17,7 +17,7 @@ let gitOwner = "SaturnFramework"
 let gitHome = "https://github.com/" + gitOwner
 let gitName = "Saturn.Template"
 
-let release = ReleaseNotes.parse (System.IO.File.ReadAllLines "RELEASE_NOTES.md")
+let release = ReleaseNotes.parse (System.IO.File.ReadAllLines $"{__SOURCE_DIRECTORY__}/../RELEASE_NOTES.md")
 
 let formattedRN =
   release.Notes
@@ -56,7 +56,7 @@ let init args =
       { args with
           OutputPath = Some nupkgDir
       }
-    ) ""
+    ) $"{__SOURCE_DIRECTORY__}/../Saturn.Template.proj"
   )
 
   Target.create "ReleaseGitHub" (fun _ ->
