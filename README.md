@@ -5,7 +5,7 @@ A dotnet CLI template for [Saturn](https://github.com/Krzysztof-Cieslak/Saturn) 
 
 ## Prerequisites
 
-* [dotnet SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+* [dotnet SDK](https://dotnet.microsoft.com/en-us/download)
 
 ## Using the template
 
